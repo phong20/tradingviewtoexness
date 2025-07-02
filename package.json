@@ -1,0 +1,37 @@
+{
+  "name": "tradingviewtoexness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.example.tradingview",
+    "productName": "TradingView",
+    "files": [
+      "src/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "uuid": "^11.1.0"
+  }
+}
