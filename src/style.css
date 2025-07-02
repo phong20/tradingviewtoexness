@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #131722;
+}
+
+.title-bar {
+    -webkit-app-region: drag;
+    height: 40px;
+    background-color: #202124;
+    color: #c9d1d9;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    border-bottom: 1px solid #2a2e39;
+}
+
+.tabs-container {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.tab {
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-right: 1px solid #2a2e39;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: transparent;
+    max-width: 200px;
+}
+
+.tab.active {
+    background-color: black;
+}
+
+.tab:not(.active):hover {
+    background-color: #1c212e;
+}
+
+.tab-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.close-tab-btn {
+    background: transparent;
+    border: none;
+    color: #c9d1d9;
+    border-radius: 50%;
+    width: 24px; /* Tăng kích thước */
+    height: 24px; /* Tăng kích thước */
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Tăng kích thước icon */
+}
+
+.close-tab-btn:hover {
+    background-color: #3a3f4b;
+}
+
+.add-tab-btn {
+    -webkit-app-region: no-drag;
+    background: transparent;
+    border: none;
+    color: #c9d1d9;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #2a2e39;
+}
+
+.add-tab-btn:hover {
+    background-color: #2a2e39;
+}
+
+.drag-spacer {
+    flex-grow: 1;
+    -webkit-app-region: drag;
+}
+
+.account-selector {
+    -webkit-app-region: no-drag;
+    margin-left: 10px; /* Khoảng cách từ drag-spacer */
+    margin-right: 10px; /* Khoảng cách đến title-bar-btns */
+}
+
+#account-dropdown {
+    background-color: #2a2e39;
+    color: #c9d1d9;
+    border: 1px solid #3a3f4b;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    min-width: 150px; /* Đảm bảo đủ rộng */
+}
+
+#account-dropdown option {
+    background-color: #2a2e39;
+    color: #c9d1d9;
+    padding: 5px; /* Thêm padding cho các option */
+}
+#account-dropdown:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #3a3f4b;
+}
+.title-bar-btns {
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-items: center;
+}
+
+.title-bar-btns button {
+    background: transparent;
+    border: none;
+    color: #c9d1d9;
+    width: 45px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-bar-btns button:hover {
+    background-color: #2a2e39;
+}
+
+#close-btn:hover {
+    background-color: #e81123;
+    color: white;
+}
+
+#content {
+    height: calc(100vh - 41px);
+    width: 100vw;
+    border: none;
+}
